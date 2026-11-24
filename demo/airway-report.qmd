@@ -1,0 +1,95 @@
+---
+title: "Airway RNA-seq report"
+author: "Artur Sannikov"
+date: "2026-11-25"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+bibliography: references.bib
+---
+
+# Samples
+
+Eight airway samples from four airway smooth muscle cell lines, treated or
+untreated with dexamethasone [@himes2014]. The counts and sample metadata are
+stored together in a `SummarizedExperiment`.
+
+```{r}
+#| label: import-libraries
+### #| message: false
+library(airway)
+library(SummarizedExperiment)
+library(ggplot2)
+```
+
+```{r}
+#| label: load-data
+data(airway)
+```
+
+Try to break the rendering process. Why do we load data here? What if we load it
+after "Number of samples"?
+
+## Number of samples
+
+The dataset has `r nrow(airway)` rows.
+
+```{r}
+#| label: tbl-metadata
+#| tbl-cap: "Airway sample metadata."
+
+meta <- as.data.frame(colData(airway))
+meta[, c("SampleName", "cell", "dex", "albut")]
+```
+
+See @tbl-metadata-knitr, formatted with `knitr`.
+
+```{r}
+#| label: tbl-metadata-knitr
+#| tbl-cap: "The same metadata, formatted with `knitr`."
+
+meta[, c("SampleName", "cell", "dex", "albut")] |>
+  knitr::kable(
+    col.names = c("Sample", "Cell line", "Dexamethasone", "Albuterol"),
+    row.names = FALSE,
+    align = "lccc"
+  )
+```
+
+See @tbl-metadata-highlighted, with the two N61311 samples highlighted.
+
+```{r}
+#| label: tbl-metadata-highlighted
+#| tbl-cap: "The same metadata, with the two N61311 samples highlighted."
+
+highlight_rows <- which(meta$cell == "N61311")
+
+meta[, c("SampleName", "cell", "dex", "albut")] |>
+  knitr::kable(
+    col.names = c("Sample", "Cell line", "Dexamethasone", "Albuterol"),
+    row.names = FALSE
+  ) |>
+  kableExtra::kable_styling(full_width = TRUE) |>
+  kableExtra::row_spec(highlight_rows, background = "#fff3cd")
+```
+
+## Total counts
+
+The figure below is generated from the counts assay every time the report is
+rendered.
+
+```{r}
+#| label: fig-total-counts
+#| fig-cap: "Total counts per sample."
+counts <- colSums(assay(airway, "counts"))
+df <- data.frame(sample = names(counts), total = counts)
+
+ggplot(df, aes(total, reorder(sample, total))) +
+  geom_col(fill = "#2f6f9f") +
+  labs(x = "Total counts", y = NULL)
+```
+
+Total counts are shown in @fig-total-counts. The sample metadata is shown in
+@tbl-metadata.

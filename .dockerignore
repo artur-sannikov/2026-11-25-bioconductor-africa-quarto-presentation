@@ -1,0 +1,7 @@
+demo/renv/*
+!demo/renv/activate.R
+!demo/renv/settings.json
+
+.git
+node_modules
+dist

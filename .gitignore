@@ -1,0 +1,7 @@
+node_modules/
+demo/renv/*
+!demo/renv/activate.R
+!demo/renv/settings.json
+dist/
+.DS_Store
+*.log
