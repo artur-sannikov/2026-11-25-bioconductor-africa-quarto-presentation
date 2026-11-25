@@ -25,6 +25,36 @@ npm run export
 npx playwright install chromium
 ```
 
+## Docker
+
+A prebuilt image with R, Bioconductor, Quarto and the demo's `renv`
+environment is published to GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/artur-sannikov/2026-11-25-bioconductor-africa-quarto-presentation:latest
+```
+
+Start an RStudio server instance:
+
+```bash
+docker run -it --rm -p 8787:8787 \
+  -e PASSWORD=bioc ghcr.io/artur-sannikov/2026-11-25-bioconductor-africa-quarto-presentation:latest
+```
+
+Go to `localhost:8787` in your browser and login with
+`rstudio` or `root` (if using rootless Docker) and `bioc`
+password.
+
+In the R console:
+
+```
+setwd("/workspace/demo")
+renv::restore()
+# Select 1: Activate the project and use the project library.
+```
+
+You can open `airway-report.qmd` file and experiment with it.
+
 ## Files
 
 | Path                     | Purpose                                    |
