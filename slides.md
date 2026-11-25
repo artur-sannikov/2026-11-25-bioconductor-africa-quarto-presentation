@@ -43,6 +43,51 @@ mdc: true
 </div>
 
 ---
+layout: default
+class: about-slide
+---
+
+<div class="about-grid">
+  <div class="about-photo">
+    <img src="./img/artur_sannikov.jpg" alt="Artur Sannikov" />
+  </div>
+  <div>
+    <p class="eyebrow">About me</p>
+    <h1>Artur Sannikov</h1>
+    <p class="about-role">Doctoral researcher</p>
+    <p class="about-bio">
+        Computational biologist in microbiome and food sciences.
+    </p>
+    <div class="cols-2">
+      <div class="card">
+        <div class="card-kicker">Focus</div>
+        <div class="card-title">Impact of plant-based foods on human microbiome</div>
+        <p>Processed food · Gut and saliva · Replicable science</p>
+      </div>
+      <div class="card">
+        <div class="card-kicker">Toolbox</div>
+        <div class="tool-tags">
+          <span>R</span>
+          <span>Bioconductor</span>
+          <span>Quarto</span>
+          <span>Git</span>
+          <span>Linux</span>
+          <span>Nix</span>
+          <span>Bash</span>
+          <span>Docker</span>
+        </div>
+      </div>
+    </div>
+    <p class="about-contact">
+      <span>github.com/artur-sannikov</span>
+      <span>asannikov.com</span>
+      <span>hanhinevalab.utu.fi</span>
+      <span>datascience.utu.fi</span>
+    </p>
+  </div>
+</div>
+
+---
 layout: statement
 class: promise-slide
 ---

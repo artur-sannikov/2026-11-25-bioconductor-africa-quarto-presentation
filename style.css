@@ -902,6 +902,83 @@
   font-style: italic;
 }
 
+/* ── About me ────────────────────────────────────────────────── */
+.about-slide h1 {
+  margin-bottom: 0.35rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.32fr 0.68fr;
+  gap: 1.8rem;
+  align-items: start;
+  margin-top: 0.6rem;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-role {
+  color: var(--q-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.65rem;
+}
+
+.about-bio {
+  color: var(--q-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0 0 0.9rem;
+}
+
+.about-slide .card p {
+  margin: 0;
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  margin-top: 0.2rem;
+}
+
+.tool-tags span {
+  background: var(--q-accent-soft);
+  border: 1px solid #d5e6f2;
+  border-radius: 99px;
+  color: var(--q-deep-2);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.45;
+  padding: 0.1rem 0.5rem;
+}
+
+.about-contact {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+  margin-top: 0.95rem;
+  color: var(--q-muted);
+  font-family: var(--q-mono);
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.about-contact span {
+  border-left: 2px solid #b9cfdd;
+  padding-left: 0.6rem;
+}
+
+.about-contact span:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
 /* Print / export nicety */
 @media print {
   .slidev-layout {
