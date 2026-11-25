@@ -1114,5 +1114,9 @@ layout: chapter
     <div class="closing-kicker">open discussion</div>
     <h1>Questions?</h1>
   </div>
+  <div class="closing-qr">
+    <img src="./img/website_qr.png" />
+    <span>asannikov.com</span>
+  </div>
 </div>
 

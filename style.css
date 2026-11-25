@@ -405,6 +405,8 @@
 .closing-slide {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -422,6 +424,31 @@
 .closing-inner {
   max-width: 80%;
 }
+
+.closing-qr {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.closing-qr img {
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 4px;
+  image-rendering: pixelated;
+}
+
+.closing-qr span {
+  color: #c7dfed;
+  font-family: var(--q-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 
 .closing-kicker {
   color: #8fc8e8;
