@@ -88,6 +88,52 @@ class: about-slide
 </div>
 
 ---
+layout: default
+class: finland-slide
+---
+
+<div class="finland-head">
+  <div>
+    <p class="eyebrow">Where am I from?</p>
+    <h1>About Finland</h1>
+    <p class="finland-lead">
+      A country in Northern Europe.
+    </p>
+  </div>
+  <div class="finland-flag" aria-label="Flag of Finland"></div>
+</div>
+
+<div class="stat-row">
+  <div class="stat"><strong>5.6M</strong><span>people</span></div>
+  <div class="stat"><strong>188,000</strong><span>lakes</span></div>
+  <div class="stat"><strong>~75%</strong><span>forest cover</span></div>
+</div>
+
+<div class="finland-body">
+  <div class="card card-map">
+    <div class="card-kicker">Location</div>
+    <img src="./img/finland_map.png" alt="Map of Finland" />
+  </div>
+  <div class="finland-facts">
+    <div class="card card-weather">
+      <div class="card-kicker">Weather</div>
+      <div class="weather-body">
+        <img src="./img/turku_weather.png" alt="Turku weather chart" />
+        <div>
+          <div class="weather-temp">2.87 °C</div>
+          <p>Average yearly temperature in Finland.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-kicker">Turku</div>
+      <div class="card-title">Oldest city</div>
+      <p>Former capital on the south-west coast; the University of Turku was founded in 1920.</p>
+    </div>
+  </div>
+</div>
+
+---
 layout: statement
 class: promise-slide
 ---
